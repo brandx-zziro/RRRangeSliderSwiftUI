@@ -98,7 +98,7 @@ public struct RRRangeSliderSwiftUI: View {
                     }))
                 
                 // minimum value text draw inside minimum glob view
-                Text(String(format: "%.0f", (CGFloat(self.minValue) / self.sliderWidth) * 100))
+                Text(String(format: "%.0f", (CGFloat(self.minValue) / CGFloat(self.sliderWidth)) * 100))
                     .offset(x: CGFloat(self.minValue))
                     .frame(width: 30, height: 30, alignment: .center)
                     .foregroundColor(sliderMinMaxValuesColor)
@@ -118,7 +118,7 @@ public struct RRRangeSliderSwiftUI: View {
                     }))
                 
                 // maximum value text draw inside maximum glob view
-                Text(String(format: "%.0f", (CGFloat(self.maxValue) / self.sliderWidth) * 100))
+                Text(String(format: "%.0f", (CGFloat(self.maxValue) / CGFloat(self.sliderWidth)) * 100))
                     .offset(x: CGFloat(self.maxValue - 18))
                     .frame(width: 30, height: 30, alignment: .center)
                     .foregroundColor(sliderMinMaxValuesColor)
